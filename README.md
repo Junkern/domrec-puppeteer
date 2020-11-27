@@ -22,7 +22,7 @@ await recorder.init()
 
 await recorder.stopRecording()
 await browser.close()
-const collectedSaves = recorder.collectedSaves
+const recordings = recorder.recordings
 ```
 
 ## API
@@ -34,7 +34,12 @@ const collectedSaves = recorder.collectedSaves
 
 Properties:
 
-* `collectedSaves`: The collected saves. For information about the data structure see https://github.com/Junkern/DOMRec
+* `recordings`: The collected recordings. For information about the data structure see https://github.com/Junkern/DOMRec
+
+
+## What to do with the `recordings`?
+
+Use the `DOMRecPlayer` from https://github.com/Junkern/DOMRec#replaying
 
 ## Inner Working
 
