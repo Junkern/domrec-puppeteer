@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junkern/domrec-puppeteer.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "domrec-core": "0.0.2"
   },
-  "devDependencies": {
-    "puppeteer": "^5.5.0"
-  }
+  "devDependencies": {},
+  "files": [
+    "src/*"
+  ]
 }
