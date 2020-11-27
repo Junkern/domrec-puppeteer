@@ -4,12 +4,12 @@ const path = require('path')
 class PuppeteerRecorder {
   constructor(page) {
     this.page = page
-    this.collectedSaves = []
+    this.recordings = []
   }
 
   async init() {
     await this.page.exposeFunction('sendData', (data)=> {
-      this.collectedSaves.push(data)
+      this.recordings.push(data)
     })
     await this.page.evaluateOnNewDocument(this.loadDOMRecordingScript());
     await this.page.evaluateOnNewDocument(this.loadControllerScript());
